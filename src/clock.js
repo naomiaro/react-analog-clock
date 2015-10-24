@@ -12,7 +12,9 @@ var AnalogClock = React.createClass({
     return this.extractMomentInfo(moment().tz(this.props.tz));
   },
   componentDidMount: function() {
-    this.interval = setInterval(this.tick, 1000);
+    setTimeout(function() {
+      this.interval = setInterval(this.tick, 1000);
+    }.bind(this), this.state.milliseconds);
   },
   componentWillUnmount: function() {
     clearInterval(this.interval);
