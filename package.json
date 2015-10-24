@@ -1,0 +1,35 @@
+{
+  "name": "react-clock-face",
+  "version": "0.0.1",
+  "dependencies": {
+    "moment-timezone": "^0.4.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
+  },
+  "devDependencies": {
+    "babelify": "^6.4.0"
+  },
+  "description": "Analog Clock Component",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naomiaro/react-analog-clock.git"
+  },
+  "keywords": [
+    "react-component",
+    "clock",
+    "analog"
+  ],
+  "author": "naomiaro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naomiaro/react-analog-clock/issues"
+  },
+  "homepage": "https://github.com/naomiaro/react-analog-clock#readme"
+}
