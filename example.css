@@ -1,0 +1,20 @@
+.analog-clock {
+  height: 400px;
+  width: 400px;
+  padding: 0;
+  margin: 0;
+}
+.analog-clock #face {
+  stroke-width: 2px;
+  stroke: #fff;
+}
+.analog-clock #hour,
+.analog-clock #min,
+.analog-clock #sec {
+  stroke-width: 1px;
+  fill: #333;
+  stroke: #555;
+}
+.analog-clock #sec {
+  stroke: #f55;
+}
