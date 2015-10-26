@@ -1,8 +1,7 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var moment = require('moment-timezone');
+import React from 'react';
+import moment from 'moment-timezone';
 
-var AnalogClock = React.createClass({
+var ReactAnalogClock = React.createClass({
   getDefaultProps: function(){
     return {
       tz: 'America/Vancouver'
@@ -57,4 +56,4 @@ var AnalogClock = React.createClass({
   }
 });
 
-ReactDOM.render(<AnalogClock />, document.getElementById('container'));
+module.exports = ReactAnalogClock;

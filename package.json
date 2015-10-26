@@ -1,18 +1,29 @@
 {
-  "name": "react-clock-face",
+  "name": "react-analog-clock",
   "version": "0.0.1",
   "dependencies": {
     "moment-timezone": "^0.4.1",
     "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react-dom": "^0.14.0",
+    "reactify": "^0.17.1"
   },
   "devDependencies": {
-    "babelify": "^6.4.0"
+    "babelify": "^6.4.0",
+    "gulp": "^3.9.0",
+    "react-component-gulp-tasks": "^0.7.6"
   },
   "description": "Analog Clock Component",
   "main": "index.js",
   "directories": {
     "example": "examples"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "browserify-shim": {
+    "react": "global:React"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
