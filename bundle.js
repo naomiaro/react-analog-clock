@@ -60,13 +60,29 @@ var ReactAnalogClock = _react2['default'].createClass({
       _react2['default'].createElement(
         'svg',
         { id: 'clock', viewBox: '0 0 100 100' },
-        _react2['default'].createElement('circle', { id: 'face', cx: '50', cy: '50', r: '45' }),
+        _react2['default'].createElement('circle', { id: 'face', cx: '50', cy: '50', r: '48' }),
         _react2['default'].createElement(
           'g',
           { id: 'hands' },
           _react2['default'].createElement('rect', { id: 'hour', x: '48.5', y: '17.5', width: '5', height: '35', rx: '2.5', ry: '2.55', transform: this.rotateHours() }),
           _react2['default'].createElement('rect', { id: 'min', x: '48', y: '12.5', width: '3', height: '40', rx: '2', ry: '2', transform: this.rotateMinutes() }),
           _react2['default'].createElement('line', { id: 'sec', x1: '50', y1: '50', x2: '50', y2: '16', transform: this.rotateSeconds() })
+        ),
+        _react2['default'].createElement(
+          'g',
+          { id: 'ticks' },
+          _react2['default'].createElement('rect', null),
+          _react2['default'].createElement('rect', null),
+          _react2['default'].createElement('rect', null),
+          _react2['default'].createElement('rect', null),
+          _react2['default'].createElement('rect', null),
+          _react2['default'].createElement('rect', null),
+          _react2['default'].createElement('rect', null),
+          _react2['default'].createElement('rect', null),
+          _react2['default'].createElement('rect', null),
+          _react2['default'].createElement('rect', null),
+          _react2['default'].createElement('rect', null),
+          _react2['default'].createElement('rect', null)
         )
       )
     );
