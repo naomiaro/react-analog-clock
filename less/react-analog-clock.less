@@ -1,3 +1,5 @@
+@radius: 48;
+
 .analog-clock {
   height: 400px;
   width: 400px;
@@ -5,10 +7,39 @@
   margin: 0;
 
   #face {
-  stroke-width: 2px; stroke: #fff; 
+    stroke-width: 2px;
+    stroke: #000;
+    fill: #fff;
   }
   #hour, #min, #sec {
-    stroke-width: 1px; fill: #333; stroke: #555;
+    stroke-width: 1px;
+    fill: #555;
+    stroke: #000;
   }
-  #sec { stroke: #f55; }
+  #sec {
+    stroke: #f55;
+  }
+
+  .loop(@counter) when (@counter > 0) {
+    @radians: 2*pi() / 12 * @counter;
+    @rotation: @counter * 30 + 90;
+
+    width: 3px;
+    height: 5px;
+
+    &:nth-child(@{counter}) {
+      x: @radius*cos(@radians) + 50;
+      y: @radius*sin(@radians) + 50;
+      transform: rotate(unit(@rotation, deg));
+      transform-origin: 0% 0%;
+    }
+
+    .loop((@counter - 1));
+  }
+
+  #ticks {
+    rect {
+      .loop(12);
+    }
+  }
 }
